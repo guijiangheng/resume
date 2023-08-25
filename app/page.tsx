@@ -194,7 +194,7 @@ export default function Home() {
                 href="https://nano-toast-web.vercel.app/"
                 rel="noreferrer"
               >
-                toast组建
+                toast组件
               </a>
               ; 乐于分享,搭建过自己的技术博客; 热爱学习, 经常在Udemy上买课
             </li>
