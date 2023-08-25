@@ -1,0 +1,19 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.addMissingImports": true,
+    "source.organizeImports": true
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "cSpell.words": [
+    "sandpack",
+    "tailwindcss",
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}
