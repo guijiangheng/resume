@@ -3,6 +3,7 @@ import { BiLogoGmail } from 'react-icons/bi';
 import {
   BsFillGeoAltFill,
   BsFillMarkdownFill,
+  BsFillPersonFill,
   BsFillTelephoneFill,
   BsGithub,
   BsTwitter,
@@ -23,7 +24,10 @@ export default function Home() {
 
         <div className="flex items-center justify-center gap-4 text-gray-700">
           <div className="flex items-center gap-1">
-            <BsFillGeoAltFill /> 深圳南山
+            <BsFillPersonFill /> 1992.09 男 江西
+          </div>
+          <div className="flex items-center gap-1">
+            <BsFillGeoAltFill /> 深圳南山 GrContactInfo
           </div>
           <div className="flex items-center gap-1">
             <BsFillTelephoneFill /> 19327814964
