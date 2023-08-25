@@ -1,4 +1,5 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: [
@@ -8,11 +9,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        serif: ['SimSun', ...defaultTheme.fontFamily.serif],
       },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          lg: '2rem',
+        },
+        screens: {
+          lg: '860px',
+        },
+      }
     },
   },
   plugins: [],
