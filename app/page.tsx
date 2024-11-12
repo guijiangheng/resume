@@ -12,6 +12,7 @@ import {
 } from 'react-icons/bs';
 
 import { MyLink } from '@/components/link';
+import { ThemeSwitcher } from '@/components/theme-switcher';
 
 export const metadata: Metadata = {
   title: '桂江亨 - 个人简历',
@@ -266,7 +267,7 @@ const Education = () => {
     <Section title="教育经历">
       <ul className="text-muted-foreground">
         {educations.map(({ college, major, degree }, index) => (
-          <li key={index}>
+          <li key={index} className="space-x-1">
             <span>{college}</span>
             <span>{major}</span>
             <span>{degree}</span>
@@ -290,7 +291,8 @@ const SelfEvaluation = () => (
 
 export default function Home() {
   return (
-    <div className="container max-w-screen-md px-4 py-16 print:py-8 sm:px-0">
+    <div className="container relative max-w-screen-md px-4 py-16 print:py-8 sm:px-0">
+      <ThemeSwitcher className="absolute right-3 top-3 z-10" />
       <main className="space-y-4">
         <Introduction />
         <WorkExperience />

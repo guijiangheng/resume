@@ -1,27 +1,20 @@
-'use client'
+'use client';
 
-import type React from 'react'
+import type React from 'react';
 
-import { ThemeProvider, useTheme } from 'next-themes'
-
-import { usePostMessage } from '@/lib/use-postmessage'
-
-const ThemePoster = () => {
-  const { theme } = useTheme()
-  usePostMessage('PARENT_CONFIG', { theme })
-
-  return null
-}
+import { ThemeProvider } from 'next-themes';
 
 export const AppThemeProvider = ({
   children,
 }: {
-  children: React.ReactNode
-}) => {
-  return (
-    <ThemeProvider enableSystem={true} attribute="class" storageKey="theme" defaultTheme="system">
-      <ThemePoster />
-      {children}
-    </ThemeProvider>
-  )
-}
+  children: React.ReactNode;
+}) => (
+  <ThemeProvider
+    enableSystem={true}
+    attribute="class"
+    storageKey="theme"
+    defaultTheme="system"
+  >
+    {children}
+  </ThemeProvider>
+);

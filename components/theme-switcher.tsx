@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import { Monitor, Moon, Sun } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import { Monitor, Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
-import { cn } from '@/lib'
+import { cn } from '@/lib/cn';
 
 const buttons = [
   {
@@ -19,27 +19,29 @@ const buttons = [
     icon: Sun,
     theme: 'light',
   },
-]
+];
 
 export const ThemeSwitcher = ({ className }: { className?: string }) => {
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return (
     <span className={cn('inline-flex gap-1', className)}>
-      {buttons.map(x => (
+      {buttons.map((x) => (
         <button
           key={x.theme}
           title={x.theme}
-          onClick={() => setTheme(x.theme)}
+          onClick={() => {
+            setTheme(x.theme);
+          }}
           className={cn(
-            'p-1 text-muted-foreground hover:bg-accent rounded-md hover:text-foreground',
+            'rounded-md p-1 text-muted-foreground hover:bg-accent hover:text-foreground',
             theme === x.theme && 'text-foreground',
           )}
         >
@@ -47,5 +49,5 @@ export const ThemeSwitcher = ({ className }: { className?: string }) => {
         </button>
       ))}
     </span>
-  )
-}
+  );
+};

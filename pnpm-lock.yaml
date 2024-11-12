@@ -26,9 +26,15 @@ importers:
       eslint-config-next:
         specifier: 13.4.19
         version: 13.4.19(eslint@8.47.0)(typescript@5.2.2)
+      lucide-react:
+        specifier: ^0.456.0
+        version: 0.456.0(react@18.2.0)
       next:
         specifier: 13.4.19
         version: 13.4.19(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      next-themes:
+        specifier: ^0.4.3
+        version: 0.4.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       postcss:
         specifier: 8.4.28
         version: 8.4.28
@@ -1128,6 +1134,11 @@ packages:
     version: 6.0.0
     engines: {node: '>=10'}
 
+  lucide-react@0.456.0:
+    resolution: {integrity: sha512-DIIGJqTT5X05sbAsQ+OhA8OtJYyD4NsEMCA/HQW/Y6ToPQ7gwbtujIoeAaup4HpHzV35SQOarKAWH8LYglB6eA==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
+
   merge2@https://r2.cnpmjs.org/merge2/-/merge2-1.4.1.tgz:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==, tarball: https://r2.cnpmjs.org/merge2/-/merge2-1.4.1.tgz}
     version: 1.4.1
@@ -1163,6 +1174,12 @@ packages:
   natural-compare@https://r2.cnpmjs.org/natural-compare/-/natural-compare-1.4.0.tgz:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==, tarball: https://r2.cnpmjs.org/natural-compare/-/natural-compare-1.4.0.tgz}
     version: 1.4.0
+
+  next-themes@0.4.3:
+    resolution: {integrity: sha512-nG84VPkTdUHR2YeD89YchvV4I9RbiMAql3GiLEQlPvq1ioaqPaIReK+yMRdg/zgiXws620qS1rU30TiWmmG9lA==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
 
   next@13.4.19:
     resolution: {integrity: sha512-HuPSzzAbJ1T4BD8e0bs6B9C1kWQ6gv8ykZoRWs5AQoiIuqbGHHdQO7Ljuvg05Q0Z24E2ABozHe6FxDvI6HfyAw==}
@@ -2834,6 +2851,10 @@ snapshots:
     dependencies:
       yallist: https://r2.cnpmjs.org/yallist/-/yallist-4.0.0.tgz
 
+  lucide-react@0.456.0(react@18.2.0):
+    dependencies:
+      react: 18.2.0
+
   merge2@https://r2.cnpmjs.org/merge2/-/merge2-1.4.1.tgz: {}
 
   micromatch@4.0.5:
@@ -2860,6 +2881,11 @@ snapshots:
   nanoid@3.3.6: {}
 
   natural-compare@https://r2.cnpmjs.org/natural-compare/-/natural-compare-1.4.0.tgz: {}
+
+  next-themes@0.4.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   next@13.4.19(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
