@@ -13,6 +13,7 @@ const links = {
   minpt: 'https://github.com/guijiangheng/minpt',
   toast: 'https://nano-toast-web.vercel.app/',
   particles: 'https://guijiangheng.github.io/interactive-particles/',
+  tool: 'https://github.com/guijiangheng/create-common-app',
 };
 
 interface MyLinkProps extends Omit<ComponentProps<typeof Link>, 'href'> {
@@ -23,7 +24,10 @@ export const MyLink = ({ type, className, ...props }: MyLinkProps) => (
   <Link
     {...props}
     href={links[type]}
-    target="_blank"
-    className={cn('inline-flex items-center')}
+    target={type === 'gmail' ? undefined : '_blank'}
+    className={cn(
+      'mx-0.5 inline-flex items-center underline underline-offset-4',
+      className,
+    )}
   />
 );
