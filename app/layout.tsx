@@ -1,7 +1,11 @@
-import { Inter } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+import { Inter as FontSans } from 'next/font/google';
+
+const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
 
 export default function RootLayout({
   children,
@@ -11,7 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/avatar.jpeg" sizes="any" />
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${fontSans.variable} bg-background text-foreground font-sans text-sm antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
