@@ -233,7 +233,7 @@ const Skills = () => (
       </li>
       <li>熟悉Jest，React testing library，Cypress，Playwright等测试工具。</li>
       <li>
-        掌握Nest，Go和Rust等后端技术。掌握基本的MySQL，Postgres增删改查，数据库事物，DB
+        掌握Nest，Go和Rust等后端技术。掌握基本的MySQL，Postgres增删改查，数据库事务，DB
         Migration使用。
       </li>
       <li>熟悉Docker，K8S日常操作，搭建过Gitlab Pipeline。</li>
