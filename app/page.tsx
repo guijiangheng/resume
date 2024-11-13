@@ -49,10 +49,10 @@ const Introduction = () => (
         <BsFillGeoAltFill />
         深圳罗湖
       </div>
-      <div className="inline-flex items-center gap-0.5">
+      <MyLink type="phone" className="gap-0.5">
         <BsFillTelephoneFill />
         19327814964
-      </div>
+      </MyLink>
       <MyLink type="gmail" className="gap-0.5">
         <BiLogoGmail /> kakaxizhh@gmail.com
       </MyLink>

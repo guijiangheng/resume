@@ -4,8 +4,9 @@ import { type ComponentProps } from 'react';
 import { cn } from '@/lib/cn';
 
 const links = {
-  twitter: 'https://x.com/guijiangheng',
+  phone: 'tel:19327814964',
   gmail: 'mailto:kakaxizhh@gmail.com',
+  twitter: 'https://x.com/guijiangheng',
   github: 'https://github.com/guijiangheng',
   zhihu: 'https://www.zhihu.com/people/gui-jiang-heng',
   blog: 'https://guijiangheng.vercel.app/',
@@ -24,7 +25,7 @@ export const MyLink = ({ type, className, ...props }: MyLinkProps) => (
   <Link
     {...props}
     href={links[type]}
-    target={type === 'gmail' ? undefined : '_blank'}
+    {...(['gmail', 'phone'].includes(type) ? {} : { target: '_blank' })}
     className={cn(
       'mx-0.5 inline-flex items-center underline underline-offset-4',
       className,
